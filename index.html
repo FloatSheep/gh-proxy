@@ -50,18 +50,21 @@
         outline: none;
     }
 
-    .bar {
-        content: '';
-        height: 2px;
-        width: 100%;
-        bottom: 0;
-        position: absolute;
-        background: #00bfb3;
-        transition: 0.2s ease transform;
-        -moz-transition: 0.2s ease transform;
-        -webkit-transition: 0.2s ease transform;
-        transform: scaleX(0);
-    }
+.bar {
+    content: '';
+    height: 2px;
+    background-image: linear-gradient(to right,var(--tw-gradient-stops));
+    --tw-gradient-from: #4f46e5;
+    --tw-gradient-to: #e11d48;
+    --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to);
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    transition: 0.2s ease transform;
+    -moz-transition: 0.2s ease transform;
+    -webkit-transition: 0.2s ease transform;
+    transform: scaleX(0);
+}
 
     .url:focus ~ .bar {
         transform: scaleX(1);
